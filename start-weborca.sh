@@ -18,6 +18,9 @@ log() {
 : "${ORCA_PG_SUPERUSER:=${ORCA_DB_USER}}"
 : "${ORCA_PG_SUPERPASS:=${ORCA_DB_PASS}}"
 
+DEFAULT_HTTP_LOG="/var/log/orca/http.log"
+ORCA_LOG_ROOT="/opt/jma/weborca/log"
+
 DB_CONF_PATH="/opt/jma/weborca/conf/db.conf"
 STATE_DIR="/var/lib/orca"
 SETUP_DONE_FLAG="${STATE_DIR}/.jma_setup_done"
@@ -26,6 +29,34 @@ SCHEMA_DONE_FLAG="${STATE_DIR}/.schema_checked"
 TMP_DIR="/tmp/weborca"
 
 mkdir -p "${STATE_DIR}" "${TMP_DIR}"
+
+ensure_http_log_dir() {
+    local link_dir="/var/log/orca"
+    mkdir -p "${ORCA_LOG_ROOT}"
+    if [[ -L "${link_dir}" ]]; then
+        return
+    fi
+    if [[ -e "${link_dir}" ]]; then
+        return
+    fi
+    ln -s "${ORCA_LOG_ROOT}" "${link_dir}"
+}
+
+prepare_redirect_log() {
+    ensure_http_log_dir
+    local target="${REDIRECTLOG:-$DEFAULT_HTTP_LOG}"
+    local target_dir
+    target_dir="$(dirname "${target}")"
+    mkdir -p "${target_dir}"
+    touch "${target}"
+    chown orca:orca "${target_dir}" "${target}" 2>/dev/null || true
+    if [[ "${target_dir}" == "/var/log/orca" ]]; then
+        local link_target
+        link_target="$(basename "${target}")"
+        ln -sf "${link_target}" /var/log/orca/orca_http.log
+    fi
+    export REDIRECTLOG="${target}"
+}
 
 wait_for_db() {
     local elapsed=0
@@ -196,7 +227,8 @@ export DBNAME='${ORCA_DB_NAME}'
 export DBUSER='${ORCA_DB_USER}'
 export DBPASS='${ORCA_DB_PASS}'
 export DBENCODING='${ORCA_DB_ENCODING}'
-exec /opt/jma/weborca/mw/bin/weborca
+export REDIRECTLOG='${REDIRECTLOG}'
+exec /bin/bash -lc "set -euo pipefail; /opt/jma/weborca/mw/bin/weborca 2>&1 | tee -a '${REDIRECTLOG}'"
 EOF
     exec su -s /bin/bash orca -c "${cmd}"
 }
@@ -207,4 +239,5 @@ seed_pgpass_files
 run_jma_setup
 maybe_run_schema_check
 maybe_set_ormaster_password
+prepare_redirect_log
 start_weborca

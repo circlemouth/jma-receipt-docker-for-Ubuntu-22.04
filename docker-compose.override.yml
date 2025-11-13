@@ -1,0 +1,15 @@
+version: "3.8"
+
+# WebORCA のログをホストへ永続化する override 例。
+# 1) このファイルを docker-compose.override.yml としてコピー
+# 2) `mkdir -p logs/orca` でホスト側ディレクトリを準備
+# 3) `docker compose up -d --force-recreate orca` を実行してボリュームを反映
+
+services:
+  orca:
+    environment:
+      LOGDIR: /opt/jma/weborca/log
+    volumes:
+      - type: bind
+        source: ./logs/orca
+        target: /opt/jma/weborca/log

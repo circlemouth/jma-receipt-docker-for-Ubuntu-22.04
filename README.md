@@ -35,6 +35,12 @@ ORMASTER_PASS='ormaster' docker compose up -d
 ```
 `docker compose logs -f orca` で `Starting WebORCA middleware` が表示されたら `http://localhost:8000/` へアクセスし、ORCAMO クライアント (monsiaj 等) からは `http://localhost:8000/rpc` に接続します。`ORMASTER_PASS` を指定しない場合は、自動設定をスキップし `/opt/jma/weborca/app/bin/passwd_store.sh` を手動で実行してください。
 
+#### WebUI の初期認証情報
+- ユーザー名: `ormaster`
+- パスワード: `ORMASTER_PASS` で渡した値（このサブモジュールを OpenDolphin WebClient リポジトリから利用する場合は `docker-compose.yml` が `change_me` を設定済み）
+
+`docker compose up -d` 実行後に Web ブラウザで `http://localhost:8000/` を開き、上記の組み合わせでログインしてください。`ORMASTER_PASS` の値を変更した場合は再起動後に新しいパスワードが反映されます。
+
 ### データを保持したい場合
 Compose ファイルには既に永続ボリュームを定義済みです。
 ```bash
@@ -71,6 +77,16 @@ docker compose up -d
 - `pg_data` → `/var/lib/postgresql/data`: PostgreSQL のデータ一式。
 
 必要に応じて `/opt/jma/weborca/log` 等を追加マウントすると、ログの収集や監視が容易になります。
+
+## Route テンプレートとログ永続化
+
+### `receipt_route.ini` テンプレート
+- `example/receipt_route.ini` に WebORCA 22.04 で POST を開放するための最低限のルート定義を用意しました。`docker cp example/receipt_route.ini <container>:/opt/jma/weborca/app/etc/receipt_route.ini` で配置し、`chown orca:orca` → `chmod 640` を付与してから WebORCA を再起動してください。
+- API グループの有効化判断・エビデンス保存フローは `../../../docs/server-modernization/phase2/operations/ORCA_CONNECTIVITY_VALIDATION.md` の Runbook §4.5 を参照してください（404/405 のトリアージや config dump の保存先も同節に記載）。
+
+### ログ永続化 override
+- `docker-compose.override.yml.example` に `/opt/jma/weborca/log` を `./orca-logs` へバインドするサンプルを追記しました。`cp docker-compose.override.yml{.example,}` → `mkdir -p orca-logs` → `docker compose up -d --force-recreate orca` の順で適用します。
+- Runbook §4.5 のログ永続化手順では、ホスト側 `orca-logs/` 以下に保存されたファイルを `docs/server-modernization/phase2/operations/logs/<date>-orca-connectivity.md` から参照し、`artifacts/orca-connectivity/<RUN_ID>/` と紐付ける運用を想定しています。
 
 ## 運用タスク
 ### ormaster パスワードを再設定
