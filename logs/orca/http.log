@@ -1754,3 +1754,77 @@ ORCSJOB ED =+001##
 2025/11/13 23:13:29 RPC-:orca  ormaster M95 send_event CLICKED B12 tot:148ms app:144ms  sts:200
 2025/11/13 23:13:46 RPC-:orca  ormaster M00 send_event ACTIVATE SELNUM tot:9ms app:8ms  sts:200
 2025/11/13 23:13:47 RPC-:orca  ormaster MERR send_event CLICKED B01 tot:4ms app:1ms  sts:200
+2025/11/13 23:37:39 Websocket ReadError: orca websocket: close 1001 (going away)
+2025/11/13 23:37:39 Websocket Closed: orca fjRZyT5pXda68L5w7CW3h6
+2025/11/14 08:32:17 *** WebORCA SERVER START: 
+2025/11/14 08:32:17 query_ptinf syntax error at or near "INTO"   INTO _TOTAL ;
+2025/11/14 08:32:17 tbl_bunben syntax error at or near "error"  error ;
+2025/11/14 08:32:17 tbl_jobkanri syntax error at or near "error"  error ;
+2025/11/14 08:32:17 tbl_nyuinacct syntax error at or near "error"  error ;
+2025/11/14 08:32:17 tbl_ptnyuinrrk syntax error at or near "error"  error ;
+2025/11/14 08:32:18 tbl_syskanri syntax error at or near "error"  error ;
+2025/11/14 08:32:18 tbl_syumei syntax error at or near "error"  error ;
+2025/11/14 08:32:18 tbl_syumei syntax error at or near "error"  error ;
+2025/11/14 08:32:18 tbl_syunou_main syntax error at or near "error"  error ;
+2025/11/14 08:32:18 tbl_syunou_nyuin syntax error at or near "error"  error ;
+2025/11/14 08:32:19 view_I001 syntax error at or near ";"  SELECT * FROM view_I001 where  ;
+2025/11/14 08:32:19 view_I001 syntax error at or near ";"  SELECT COUNT ( * ) AS COUNT FROM VIEW_I001 WHERE  ;
+2025/11/14 08:32:20 非対応項目: USING [PROCEDURE DIVISION USING MCPAREA ORCMCPAREA MCPDATA-REC]
+2025/11/14 08:32:20 非対応項目: 07 [05 QSUB04-GMN-TENKENRECE-G 07 QSUB04-TENKENRECE PIC X(1)]
+2025/11/14 08:32:21 SetupTenant: orca
+2025/11/14 08:32:21 SetupSchema SCHEMA.mon Start
+2025/11/14 08:32:23 SetupSchema SCHEMA.mon End
+2025/11/14 08:32:23 SetupSchema SCHEMA.20211104 Start
+2025/11/14 08:32:23 CA_CRT ...none
+2025/11/14 08:32:23 SERVER_CRT ...none
+2025/11/14 08:32:23 SERVER_PEM ...none
+2025/11/14 08:32:23 Server Mode: HTTP
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.13.4
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:8000
+2025/11/14 08:32:24 SetupSchema SCHEMA.20211104 End
+2025/11/14 08:32:24 SetupSchema SCHEMA.20220215 Start
+2025/11/14 08:32:25 SetupSchema SCHEMA.20220215 End
+2025/11/14 08:32:25 SetupSchema SCHEMA.20220311 Start
+2025/11/14 08:32:26 SetupSchema SCHEMA.20220311 End
+2025/11/14 08:32:26 SetupSchema SCHEMA.20220318 Start
+2025/11/14 08:32:27 SetupSchema SCHEMA.20220318 End
+2025/11/14 08:32:27 SetupSchema SCHEMA.20220819 Start
+2025/11/14 08:32:28 SetupSchema SCHEMA.20220819 End
+2025/11/14 08:32:28 SetupSchema SCHEMA.20220921 Start
+2025/11/14 08:32:28 SetupSchema SCHEMA.20220921 End
+2025/11/14 08:32:28 SetupSchema SCHEMA.20230111 Start
+2025/11/14 08:32:29 SetupSchema SCHEMA.20230111 End
+2025/11/14 08:32:29 SetupSchema SCHEMA.20230201 Start
+2025/11/14 08:32:29 SetupSchema SCHEMA.20230201 End
+2025/11/14 08:32:29 SetupSchema SCHEMA.20230817 Start
+2025/11/14 08:32:29 SetupSchema SCHEMA.20230817 End
+2025/11/14 08:32:29 SetupSchema SCHEMA.20231010 Start
+2025/11/14 08:32:30 SetupSchema SCHEMA.20231010 End
+2025/11/14 08:32:30 SetupSchema SCHEMA.20240118 Start
+2025/11/14 08:32:31 SetupSchema SCHEMA.20240118 End
+2025/11/14 08:32:31 SetupSchema SCHEMA.20240205 Start
+2025/11/14 08:32:31 SetupSchema SCHEMA.20240205 End
+2025/11/14 08:32:31 SetupSchema SCHEMA.20240314 Start
+2025/11/14 08:32:32 SetupSchema SCHEMA.20240314 End
+2025/11/14 08:32:32 SetupSchema SCHEMA.20240420 Start
+2025/11/14 08:32:32 SetupSchema SCHEMA.20240420 End
+2025/11/14 08:32:32 SetupSchema SCHEMA.20240501 Start
+2025/11/14 08:32:32 SetupSchema SCHEMA.20240501 End
+2025/11/14 08:32:32 SetupSchema SCHEMA.20240815 Start
+2025/11/14 08:32:33 SetupSchema SCHEMA.20240815 End
+2025/11/14 08:32:33 SetupSchema SCHEMA.20240901 Start
+2025/11/14 08:32:34 SetupSchema SCHEMA.20240901 End
+2025/11/14 08:32:34 SetupSchema SCHEMA.20250120 Start
+2025/11/14 08:32:34 SetupSchema SCHEMA.20250120 End
+2025/11/14 08:32:34 SetupSchema SCHEMA.20250327 Start
+2025/11/14 08:32:35 SetupSchema SCHEMA.20250327 End
+2025/11/14 08:32:35 SetupSchema SCHEMA.20251002 Start
+2025/11/14 08:32:35 SetupSchema SCHEMA.20251002 End
