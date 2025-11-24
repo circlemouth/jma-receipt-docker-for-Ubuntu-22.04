@@ -81,7 +81,7 @@ docker compose up -d
 ## Route テンプレートとログ永続化
 
 ### `receipt_route.ini` テンプレート
-- `example/receipt_route.ini` に WebORCA 22.04 で POST を開放するための最低限のルート定義を用意しました。`docker cp example/receipt_route.ini <container>:/opt/jma/weborca/app/etc/receipt_route.ini` で配置し、`chown orca:orca` → `chmod 640` を付与してから WebORCA を再起動してください。
+- `example/receipt_route.ini` に WebORCA 22.04 で POST を開放するための最低限のルート定義を用意しました。現在は `Dockerfile` で自動的に `/opt/jma/weborca/app/etc/receipt_route.ini` へ配置されるため、ビルド直後から REST API が利用可能です。
 - API グループの有効化判断・エビデンス保存フローは `../../../docs/server-modernization/phase2/operations/ORCA_CONNECTIVITY_VALIDATION.md` の Runbook §4.5 を参照してください（404/405 のトリアージや config dump の保存先も同節に記載）。
 
 ### ログ永続化 override

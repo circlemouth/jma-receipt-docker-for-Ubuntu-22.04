@@ -44,6 +44,8 @@ RUN if command -v weborca-install >/dev/null 2>&1; then \
 
 # Copy configuration overrides
 COPY --chown=orca:orca jma-receipt.env /opt/jma/weborca/app/etc/jma-receipt.env
+COPY --chown=orca:orca example/receipt_route.ini /opt/jma/weborca/app/etc/receipt_route.ini
+RUN chmod 640 /opt/jma/weborca/app/etc/receipt_route.ini
 
 # Copy entrypoint helper
 COPY start-weborca.sh /usr/local/bin/start-weborca.sh
