@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   orca:
+    platform: linux/amd64
     build: .
     image: jma-receipt-weborca:22.04
     depends_on:
