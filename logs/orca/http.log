@@ -1828,3 +1828,75 @@ ____________________________________O/_______
 2025/11/14 08:32:35 SetupSchema SCHEMA.20250327 End
 2025/11/14 08:32:35 SetupSchema SCHEMA.20251002 Start
 2025/11/14 08:32:35 SetupSchema SCHEMA.20251002 End
+2026/01/28 04:28:33 *** WebORCA SERVER START: 
+2026/01/28 04:28:34 query_ptinf syntax error at or near "INTO"   INTO _TOTAL ;
+2026/01/28 04:28:34 tbl_bunben syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_jobkanri syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_nyuinacct syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_ptnyuinrrk syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_syskanri syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_syumei syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_syumei syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_syunou_main syntax error at or near "error"  error ;
+2026/01/28 04:28:34 tbl_syunou_nyuin syntax error at or near "error"  error ;
+2026/01/28 04:28:34 view_I001 syntax error at or near ";"  SELECT * FROM view_I001 where  ;
+2026/01/28 04:28:34 view_I001 syntax error at or near ";"  SELECT COUNT ( * ) AS COUNT FROM VIEW_I001 WHERE  ;
+2026/01/28 04:28:35 非対応項目: USING [PROCEDURE DIVISION USING MCPAREA ORCMCPAREA MCPDATA-REC]
+2026/01/28 04:28:36 非対応項目: 07 [05 QSUB04-GMN-TENKENRECE-G 07 QSUB04-TENKENRECE PIC X(1)]
+2026/01/28 04:28:38 SetupTenant: orca
+2026/01/28 04:28:38 SetupSchema SCHEMA.mon Start
+2026/01/28 04:28:40 SetupSchema SCHEMA.mon End
+2026/01/28 04:28:40 SetupSchema SCHEMA.20211104 Start
+2026/01/28 04:28:40 CA_CRT ...none
+2026/01/28 04:28:40 SERVER_CRT ...none
+2026/01/28 04:28:40 SERVER_PEM ...none
+2026/01/28 04:28:40 Server Mode: HTTP
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.13.4
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:8000
+2026/01/28 04:28:41 SetupSchema SCHEMA.20211104 End
+2026/01/28 04:28:41 SetupSchema SCHEMA.20220215 Start
+2026/01/28 04:28:42 SetupSchema SCHEMA.20220215 End
+2026/01/28 04:28:42 SetupSchema SCHEMA.20220311 Start
+2026/01/28 04:28:42 SetupSchema SCHEMA.20220311 End
+2026/01/28 04:28:42 SetupSchema SCHEMA.20220318 Start
+2026/01/28 04:28:43 SetupSchema SCHEMA.20220318 End
+2026/01/28 04:28:43 SetupSchema SCHEMA.20220819 Start
+2026/01/28 04:28:45 SetupSchema SCHEMA.20220819 End
+2026/01/28 04:28:45 SetupSchema SCHEMA.20220921 Start
+2026/01/28 04:28:45 SetupSchema SCHEMA.20220921 End
+2026/01/28 04:28:45 SetupSchema SCHEMA.20230111 Start
+2026/01/28 04:28:46 SetupSchema SCHEMA.20230111 End
+2026/01/28 04:28:46 SetupSchema SCHEMA.20230201 Start
+2026/01/28 04:28:46 SetupSchema SCHEMA.20230201 End
+2026/01/28 04:28:46 SetupSchema SCHEMA.20230817 Start
+2026/01/28 04:28:46 SetupSchema SCHEMA.20230817 End
+2026/01/28 04:28:46 SetupSchema SCHEMA.20231010 Start
+2026/01/28 04:28:48 SetupSchema SCHEMA.20231010 End
+2026/01/28 04:28:48 SetupSchema SCHEMA.20240118 Start
+2026/01/28 04:28:49 SetupSchema SCHEMA.20240118 End
+2026/01/28 04:28:49 SetupSchema SCHEMA.20240205 Start
+2026/01/28 04:28:49 SetupSchema SCHEMA.20240205 End
+2026/01/28 04:28:49 SetupSchema SCHEMA.20240314 Start
+2026/01/28 04:28:50 SetupSchema SCHEMA.20240314 End
+2026/01/28 04:28:50 SetupSchema SCHEMA.20240420 Start
+2026/01/28 04:28:50 SetupSchema SCHEMA.20240420 End
+2026/01/28 04:28:50 SetupSchema SCHEMA.20240501 Start
+2026/01/28 04:28:51 SetupSchema SCHEMA.20240501 End
+2026/01/28 04:28:51 SetupSchema SCHEMA.20240815 Start
+2026/01/28 04:28:51 SetupSchema SCHEMA.20240815 End
+2026/01/28 04:28:51 SetupSchema SCHEMA.20240901 Start
+2026/01/28 04:28:53 SetupSchema SCHEMA.20240901 End
+2026/01/28 04:28:53 SetupSchema SCHEMA.20250120 Start
+2026/01/28 04:28:53 SetupSchema SCHEMA.20250120 End
+2026/01/28 04:28:53 SetupSchema SCHEMA.20250327 Start
+2026/01/28 04:28:54 SetupSchema SCHEMA.20250327 End
+2026/01/28 04:28:54 SetupSchema SCHEMA.20251002 Start
+2026/01/28 04:28:54 SetupSchema SCHEMA.20251002 End
